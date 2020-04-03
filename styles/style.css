@@ -42,6 +42,7 @@ color: #fff;}
     margin: 0 auto 5px auto;
     background-color: #333;
     line-height: 70px;
+    font-size:0.8em;
     border: solid 1px rgb(255, 255, 255,0.1);
     border-radius: 5px;
     animation: 0.3s ease-in 0s 1 slideInFromLeft;
@@ -101,6 +102,7 @@ color: #fff;}
 .checkmark{
     position: absolute;
     top: 5px;
+    right: 8px;
     height: 22px;
     width: 22px;
     
@@ -152,7 +154,7 @@ color: #fff;}
 
 .card-text{
     position: absolute;
-    left: 50px;
+    left: 18px;
     top: -18px;   
 
 
