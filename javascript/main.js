@@ -18,7 +18,7 @@ methods:{
         
         addTodo: function() {
            
-            alert(this.todos)
+            
             
             if(this.inputTodo){
             let newTodo ={
@@ -29,6 +29,7 @@ methods:{
            // this.todos.push(newTodo);
            this.todos.push(newTodo);
            localStorage.setItem("todos", JSON.stringify(this.todos))
+           this.inputTodo = '';
         }
     
      
