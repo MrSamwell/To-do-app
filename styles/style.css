@@ -38,7 +38,7 @@ color: #fff;}
     color: rgb(240, 240, 250);
     height: 60px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 2px auto;
     background-color: #333;
     line-height: 60px;
     border: solid 1px rgb(255, 255, 255,0.1);
