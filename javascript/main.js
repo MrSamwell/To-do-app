@@ -59,6 +59,7 @@ methods:{
     
 },
    mounted: function() {
+        
        if(JSON.parse(localStorage.getItem('todos')) === null){
            localStorage.setItem('todos', '');
        }

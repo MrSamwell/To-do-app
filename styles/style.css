@@ -115,6 +115,9 @@ color: #fff;}
     background-color: #fff;
     transition: 0.2s;
 }
+.checkmark:hover{
+    background-color: #ccc;
+}
 
 .container input:checked ~ .checkmark{
     background-color: rgb(100, 218, 135);
