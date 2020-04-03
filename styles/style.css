@@ -13,7 +13,7 @@ html{
 
 body{
     height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1em;
     background-color: #222;
 }
@@ -200,4 +200,23 @@ color: #fff;}
     }
 }
 
+
+@media only screen and (min-width:768px){
+    .wrapper{
+        width: 40%;
+        margin: auto auto;
+    }
+    .inputBox{
+        width: 40%;
+        text-align: center;
+        bottom: 10%;
+        margin:  0 30%;
+    }
+    .inputBox input:first-child{
+        border-radius: 20px 0 0 20px;
+    }
+    .inputBox button{
+        border-radius: 0 20px 20px 0;
+    }
+}
 

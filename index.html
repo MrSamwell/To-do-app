@@ -3,7 +3,9 @@
     <head>
             <title>To-do app</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
             <link href="styles/style.css" rel="stylesheet" type="text/css">
+            
             <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
@@ -27,7 +29,7 @@
             </div>
         </div>
         <div class="inputBox">
-            <input type="text" class="inline-block" v-model="inputTodo">
+            <input type="text" class="inline-block" v-model="inputTodo" placeholder="Qual é a missão?">
             <button class="inline-block" value="" @click="addTodo"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/><path d="M0 0h24v24H0z" fill="none"/></svg></button>
         </div>
     </div>
