@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>To-do app</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="/styles/style.css" rel="stylesheet" type="text/css">
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+    <div id="app">
+        <div class="header"><h3>Tasks</h3></div>
+        <div class="wrapper">
+      <!--     <todo 
+           v-for="todo in todos"
+           v-bind:todos="todo"
+           v-bind:key="todos.id"
+           v-bind:text="todos.text"
+           v-bind:checked="todos.checked"
+           
+           ></todo> -->
+
+           <div class="todo-card"   v-for="todo in todos">
+               <label class="container"> 
+                   <input type="checkbox" v-model="todo.checked" v-on:click="alteraChecked(todo.id)">
+                   <span class="checkmark"></span><span class="card-text">{{todo.text}}</span></label>
+                   <a class="delete_icon"><svg xmlns="http://www.w3.org/2000/svg"  @click="deleteTodo(todo.id)" class="svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"/></svg></a>
+            </div>
+        </div>
+        <div class="inputBox">
+            <input type="text" class="inline-block" v-model="inputTodo">
+            <input type="button" class="inline-block" value="+" @click="addTodo">
+        </div>
+    </div>
+        <script src="javascript/main.js"></script>
+    </body>
+</html>

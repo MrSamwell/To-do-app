@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    height: 100%;
+   
+}
+
+html{
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+#app{
+    height: auto;
+}
+.header{
+    text-align: center;
+    padding: 5%;
+}
+
+.header h3{
+color: #222;}
+.wrapper{
+    background-color: #ccc;
+    height: 90%;
+    position: relative;
+    bottom: -10%;
+}
+
+.todo-card{
+    color: rgb(240, 240, 250);
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #333;
+    line-height: 60px;
+    border-bottom: solid 1px white;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.inputBox{
+    position: fixed;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    color: black;
+}
+.inputBox input:first-child{
+    width: 80%;
+}
+.inputBox input:last-child{
+    width: 20%;
+    float: right;
+}
+/* CÓDIGO REFERENTE A CHECKBOX */
+/* CÓDIGO REFERENTE A CHECKBOX */
+/* CÓDIGO REFERENTE A CHECKBOX */
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+
+.checkmark{
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+.container input:checked ~ .checkmark{
+    background-color: #808080;
+  
+}
+
+.checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after{
+    display: block;
+}
+
+.container input:checked ~ .card-text{
+    color: #808080;
+   text-decoration: line-through;
+}
+
+.container .checkmark:after{
+    left: 7px;
+    top: 3px;
+    width: 3px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    border-radius: 2px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.container {
+    position: relative;
+   
+    top: 18px;
+    left: 50px;
+}
+
+.card-text{
+    position: absolute;
+    left: 50px;
+    top: -18px;   
+
+
+    width: max-content;
+    transition: 0.5s;
+}
+/* FIM DO CÓDIGO REFERENTE A CHECKBOX */
+/* FIM DO CÓDIGO REFERENTE A CHECKBOX */
+/* FIM DO CÓDIGO REFERENTE A CHECKBOX */
+
+.delete_icon {
+    height: 100%;
+    width: 25%;
+    box-sizing: border-box;
+    background-color: transparent;
+    float: right;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+.svg{
+    height: 24px;
+    width: 24px;
+    fill: #ccc;
+    transition: 0.3s;
+}
+
+.svg:hover{
+    height: 25px;
+    width: 25px;
+    fill: rgb(255, 55, 55);
+}
