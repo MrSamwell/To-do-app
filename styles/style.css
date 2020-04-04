@@ -15,7 +15,7 @@ body{
     height: 100%;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-    background-color: #222;
+    background-color: rgba(85,89,158,1);
 }
 input:focus, button:focus{
     outline: none;
@@ -40,16 +40,19 @@ color: #fff;}
 }
 
 .todo-card{
-    color: rgb(240, 240, 250);
+    color: rgb(245, 245, 245) rgb(255, 255, 255,0.1);
     height: 70px;
     width: 94%;
     margin: 0 auto 5px auto;
-    background-color: #333;
+    background-color: rgb(245, 245, 245);
     line-height: 70px;
     font-size:0.8em;
-    border: solid 1px rgb(255, 255, 255,0.1);
+    border: solid 1px rgb(245, 245, 255);
     border-radius: 5px;
     animation: 0.3s ease-in 0s 1 slideInFromLeft;
+    -webkit-box-shadow: 3px 21px 53px -22px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 21px 53px -22px rgba(0,0,0,0.75);
+    box-shadow: 3px 21px 53px -22px rgba(0,0,0,0.75);
 }
 
 
@@ -70,10 +73,13 @@ color: #fff;}
     width: 80%;
     border: 2px #ccc solid;
     border-right: none;
-    border-radius: 20px 0 0 0;
-    font-size: 1.25em;
+    border-radius: 5px 0 0 0;
+    font-size: 0.8em;
     padding: 0 20px;
     
+}
+.inputBox input::placeholder{
+    opacity: 0.8;
 }
 .inputBox button{
     width: 20%;
@@ -81,7 +87,7 @@ color: #fff;}
     background-color: rgb(100, 218, 135);
     border: none;
     transition: 0.3s;
-    border-radius: 0 20px 0 0;
+    border-radius: 0 5px 0 0;
 }
 .inputBox button:active{
     background-color: rgb(74, 161, 100);
@@ -110,18 +116,21 @@ color: #fff;}
     right: 8px;
     height: 22px;
     width: 22px;
-    
+    border: 2px solid rgb(235, 235, 235);
     border-radius: 50%;
-    background-color: #fff;
-    transition: 0.2s;
+    background-color: white;
+    transition: 0.3s;
 }
-.checkmark:hover{
-    background-color: #ccc;
-}
+
 
 .container input:checked ~ .checkmark{
     background-color: rgb(100, 218, 135);
+    border: none;
+    animation: 0.35s ease-out 0s 1 flip;
   
+}
+.container input:not(:checked) ~ .checkmark{
+    animation: 0.35s ease-out 0s 1 shrinkThenGrow;
 }
 
 .checkmark:after{
@@ -210,6 +219,51 @@ color: #fff;}
     }
 }
 
+@keyframes shrinkThenGrow {
+    0%{
+        transform: scale(1,1);
+    }
+    20%{
+        transform: scale(0.5,0.5);
+    }
+    40%{
+        transform: scale(0.25,0.25);
+    }
+    60%{
+        transform: scale(0,0);
+    }
+    80%{
+        transform: scale(0.5,0.5);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+    
+}
+
+
+@keyframes flip {
+    0%{
+        transform: scale(1,1);
+    }
+    20%{
+        transform: scale(0.5,1);
+    }
+    40%{
+        transform: scale(0.25,1);
+    }
+    60%{
+        transform: scale(0,1);
+    }
+    80%{
+        transform: scale(0.5,1);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+    
+}
+
 
 @media only screen and (min-width:788px){
     .wrapper{
@@ -227,6 +281,9 @@ color: #fff;}
     }
     .inputBox button{
         border-radius: 0 20px 20px 0;
+    }
+    .checkmark:hover{
+        background-color: rgb(230, 230, 230);
     }
 }
 
