@@ -12,7 +12,8 @@ new Vue({el:"#app",
 data:{
     id: 0,
     inputTodo:'',
-    todos: []
+    todos: [],
+    showInput: false
 },
 methods:{
         
@@ -30,10 +31,13 @@ methods:{
            this.todos.push(newTodo);
            localStorage.setItem("todos", JSON.stringify(this.todos))
            this.inputTodo = '';
+           this.showInput = !this.showInput;
         }
+
+
     
      
-        
+    
     },
     alteraChecked: function(i) {
         this.todos[i].checked = !this.todos[i].checked
