@@ -12,10 +12,16 @@ new Vue({el:"#app",
 data:{
     id: 0,
     inputTodo:'',
-    todos: []
+    todos: [],
+    showInput: false
 },
 methods:{
-        
+        openInput: function(){
+            this.showInput = !this.showInput; 
+            setTimeout(() => {
+             this.$refs.inputdo.focus();
+            }, 0);
+        },
         addTodo: function() {
            
             
@@ -30,10 +36,13 @@ methods:{
            this.todos.push(newTodo);
            localStorage.setItem("todos", JSON.stringify(this.todos))
            this.inputTodo = '';
+           this.showInput = !this.showInput;
         }
+
+
     
      
-        
+    
     },
     alteraChecked: function(i) {
         this.todos[i].checked = !this.todos[i].checked

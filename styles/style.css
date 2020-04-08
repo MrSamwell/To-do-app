@@ -15,12 +15,16 @@ body{
     height: 100%;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-    background-color: rgba(85,89,158,1);
+    background: #EFEEEE;
 }
 input:focus, button:focus{
     outline: none;
 }
-
+.neu{
+    background: #EFEEEE;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 6px 6px 16px rgba(209, 205, 199, 0.8), -6px -6px 16px rgba(255, 255, 255, 0.8); 
+}
 #app{
     height: auto;
 }
@@ -30,7 +34,7 @@ input:focus, button:focus{
 }
 
 .header h3{
-color: #fff;}
+color: #484848;}
 .wrapper{
    
     height: auto;
@@ -40,19 +44,19 @@ color: #fff;}
 }
 
 .todo-card{
-    color: rgb(245, 245, 245) rgb(255, 255, 255,0.1);
+    color: rgb(71, 71, 71);
     height: 70px;
-    width: 94%;
-    margin: 0 auto 5px auto;
-    background-color: rgb(245, 245, 245);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    
     line-height: 70px;
     font-size:0.9em;
-    border: solid 1px rgb(245, 245, 255);
+    
     border-radius: 5px;
     animation: 0.3s ease-in 0s 1 slideInFromLeft;
-    -webkit-box-shadow: 3px 21px 53px -22px rgba(0,0,0,0.75);
-    -moz-box-shadow: 3px 21px 53px -22px rgba(0,0,0,0.75);
-    box-shadow: 3px 21px 53px -22px rgba(0,0,0,0.75);
+    background: #EFEEEE;
+    box-shadow: 6px 6px 16px rgba(209, 205, 199, 0.7), -6px -6px 16px rgba(255, 255, 255, 0.7);
+    
 }
 
 
@@ -61,21 +65,24 @@ color: #fff;}
     display: inline-block;
 }
 
+
 .inputBox{
     position: fixed;
     height: 8%;
     width: 100%;
     bottom: 0;
     color: black;
-    
+    border-top: 1px solid #ccc;
+    transition: 2s;
 }
 .inputBox input:first-child{
     width: 80%;
-    border: 2px #ccc solid;
     border-right: none;
     border-radius: 5px 0 0 0;
     font-size: 0.8em;
     padding: 0 20px;
+    background: #EFEEEE;
+    border: none;
     
 }
 .inputBox input::placeholder{
@@ -84,7 +91,7 @@ color: #fff;}
 .inputBox button{
     width: 20%;
     float: right;
-    background-color: rgb(100, 218, 135);
+    background-color: #EFEEEE;
     border: none;
     transition: 0.3s;
     border-radius: 0 5px 0 0;
@@ -93,7 +100,37 @@ color: #fff;}
     background-color: rgb(74, 161, 100);
 }
 .inputBox button svg {
-    fill: white;
+    fill:rgb(100, 218, 135);
+}
+.btnadd button{
+    
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    margin-left: 5%;
+   
+    float: right;
+    border-radius:70px;
+    vertical-align: middle;
+    transition: 0.3s;
+    
+    background: #EFEEEE;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 6px 6px 16px rgba(209, 205, 199, 0.8), -6px -6px 16px rgba(255, 255, 255, 0.8); 
+    
+}
+.btnadd button:active{
+    
+    background: #EFEEEE;
+    
+     border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    box-shadow: inset 4px 4px 8px rgba(209, 205, 199, 0.5), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+.btnadd button svg {
+    fill: rgb(100, 218, 135);
 }
 /* CÓDIGO REFERENTE A CHECKBOX */
 /* CÓDIGO REFERENTE A CHECKBOX */
@@ -116,16 +153,22 @@ color: #fff;}
     right: 8px;
     height: 22px;
     width: 22px;
-    border: 2px solid rgb(235, 235, 235);
+   
+    
+    box-sizing: border-box;
+
     border-radius: 50%;
-    background-color: white;
-    transition: 0.3s;
+    background: #EFEEEE;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    box-shadow: inset 2px 2px 4px rgba(209, 205, 199, 0.5), inset -2px -2px 4px rgba(255, 255, 255, 0.5);
 }
 
 
 .container input:checked ~ .checkmark{
-    background-color: rgb(100, 218, 135);
+    background: linear-gradient(45deg, rgba(100,218,135,0.8) 45%, rgba(123,166,255,0.8) 80%);
     border: none;
+    box-shadow: none;
     animation: 0.35s ease-out 0s 1 flip;
   
 }
@@ -203,7 +246,7 @@ color: #fff;}
 .svg:hover{
     height: 25px;
     width: 25px;
-    fill: rgb(252, 97, 97);
+    fill: rgb(252, 97, 97, 0.7);
 }
 
 /*KEY FRAMES*/
@@ -279,9 +322,7 @@ color: #fff;}
     .inputBox input:first-child{
         border-radius: 20px 0 0 20px;
     }
-    .inputBox button{
-        border-radius: 0 20px 20px 0;
-    }
+    
     .checkmark:hover{
         background-color: rgb(230, 230, 230);
     }
