@@ -28,13 +28,13 @@
                    <a class="delete_icon"><svg xmlns="http://www.w3.org/2000/svg"  @click="deleteTodo(todo.id)" class="svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"/></svg></a>
             </div>
         </div>
-        <div class="inputBox neu"  v-if="showInput">
+        <div class="inputBox"  v-if="showInput">
             
-            <input type="text" class="inline-block" v-model="inputTodo" placeholder="Qual é a missão?" maxlength="50" v-on:keyup.enter="addTodo">
+            <input  ref="inputdo" type="text" class="inline-block" v-model="inputTodo" placeholder="Qual é a missão?" maxlength="50" v-on:keyup.enter="addTodo">
             <button class="inline-block"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/><path d="M0 0h24v24H0z" fill="none"/></svg></button>
         </div>
         <div class="btnadd">
-            <button v-show="!showInput" class="inline-block" value="" @click="showInput = !showInput"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/><path d="M0 0h24v24H0z" fill="none"/></svg></button>
+            <button v-show="!showInput" class="inline-block" value="" @click="openInput"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/><path d="M0 0h24v24H0z" fill="none"/></svg></button>
         </div>
     </div>
         <script src="javascript/main.js"></script>

@@ -73,6 +73,7 @@ color: #484848;}
     bottom: 0;
     color: black;
     border-top: 1px solid #ccc;
+    transition: 2s;
 }
 .inputBox input:first-child{
     width: 80%;
@@ -165,7 +166,7 @@ color: #484848;}
 
 
 .container input:checked ~ .checkmark{
-    background-color: rgb(100, 218, 135);
+    background: linear-gradient(45deg, rgba(100,218,135,0.8) 45%, rgba(123,166,255,0.8) 80%);
     border: none;
     box-shadow: none;
     animation: 0.35s ease-out 0s 1 flip;

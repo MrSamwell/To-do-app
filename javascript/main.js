@@ -16,7 +16,12 @@ data:{
     showInput: false
 },
 methods:{
-        
+        openInput: function(){
+            this.showInput = !this.showInput; 
+            setTimeout(() => {
+             this.$refs.inputdo.focus();
+            }, 0);
+        },
         addTodo: function() {
            
             
