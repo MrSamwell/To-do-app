@@ -48,7 +48,7 @@ color: #484848;}
     height: 70px;
     width: 90%;
     margin: 0 auto 20px auto;
-    
+    white-space: pre-line;
     line-height: 70px;
     font-size:0.9em;
     
@@ -68,7 +68,7 @@ color: #484848;}
 
 .inputBox{
     position: fixed;
-    height: 8%;
+    height: 15%;
     width: 100%;
     bottom: 0;
     color: black;
@@ -216,9 +216,9 @@ color: #484848;}
     position: absolute;
     left: 18px;
     top: -18px;   
+    height: 100%;
 
-
-    width: max-content;
+    width: 25vh;
     transition: 0.5s;
 }
 /* FIM DO CÓDIGO REFERENTE A CHECKBOX */

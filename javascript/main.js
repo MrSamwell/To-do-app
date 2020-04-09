@@ -1,12 +1,5 @@
 
-Vue.component('todo', {
-   props: ['todos'],
-    template: ' <div class="todo-card"><label class="container"> <input type="checkbox" v-model="todos.checked" v-on:click="alteraChecked(todos.id)"><span class="checkmark"></span><span class="card-text">{{todos.text}}</span></label></div>'
-        
-            
-    
 
-})
 
 new Vue({el:"#app",
 data:{
