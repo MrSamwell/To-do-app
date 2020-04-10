@@ -20,6 +20,9 @@ body{
 input:focus, button:focus{
     outline: none;
 }
+.inputBox2{
+    display: none;
+}
 .neu{
     background: #EFEEEE;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -49,8 +52,9 @@ color: #484848;}
     width: 90%;
     margin: 0 auto 20px auto;
     white-space: pre-line;
-    line-height: 70px;
+    line-height: 0.9em;
     font-size:0.9em;
+    
     
     border-radius: 5px;
     animation: 0.3s ease-in 0s 1 slideInFromLeft;
@@ -213,7 +217,7 @@ color: #484848;}
 }
 
 .card-text{
-    
+    margin: 25px 0;
     position: absolute;
     left: 18px;
     top: -18px;   
@@ -309,6 +313,58 @@ color: #484848;}
 
 
 @media only screen and (min-width:788px){
+    .inputBox{
+        display: none;
+    }
+    .inputBox2{
+        display: inline;
+    }
+    .inputBox2{
+        position: fixed;
+        bottom: 10%;
+        height: 12%;
+        width: 40%;
+        
+        color: black;
+        
+        transition: 1s;
+        margin: 0 30%;
+        background: #EFEEEE;
+        border-radius: 500px;
+    box-shadow: 6px 6px 16px rgba(209, 205, 199, 0.9), -6px -6px 16px rgba(255, 255, 255, 0.9);
+        
+    }
+    .inputBox2 input:first-child{
+        width: 80%;
+        border-right: none;
+        border-radius: 50% 0 0 50%;
+        font-size: 0.8em;
+        padding: 0 50px;
+        background: #EFEEEE;
+        border: none;
+        
+    }
+    .inputBox2 input::placeholder{
+        opacity: 0.8;
+    }
+    .inputBox2 button{
+        width: 20%;
+        float: right;
+        background-color: #EFEEEE;
+        border: none;
+        transition: 0.3s;
+        border-radius: 0 50% 50% 0;
+    }
+    .inputBox2 button:active{
+        fill: rgb(74, 161, 100);
+    }
+    .inputBox2 button svg {
+        fill:rgb(100, 218, 135);
+    }
+    
+    .btnadd{
+        display: none;
+    }
     .wrapper{
         width: 40%;
         margin: auto auto;
@@ -326,5 +382,10 @@ color: #484848;}
     .checkmark:hover{
         background-color: rgb(230, 230, 230);
     }
+   .wrapper{
+       height: 65vh;
+       
+       overflow-y: auto;       
+   }
 }
 
