@@ -245,6 +245,7 @@ color: #484848;}
     width: 24px;
     fill: #ccc;
     transition: 0.3s;
+    margin: 16px 0;
 }
 
 .svg:hover{
