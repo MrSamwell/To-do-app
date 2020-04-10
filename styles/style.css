@@ -377,7 +377,7 @@ color: #484848;}
     .wrapper{
         width: 40%;
         margin: auto auto;
-        padding-top: 5px;
+        padding-top: 20px;
     }
     .inputBox{
         width: 40%;
@@ -400,7 +400,7 @@ color: #484848;}
 
    /* width */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 3px;
   }
   
   /* Track */
@@ -410,7 +410,7 @@ color: #484848;}
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgba(159, 204, 141, 0.63); 
+    background: rgba(116, 116, 116, 0.295); 
   }
   
   /* Handle on hover */
